@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Не Вело Профи — Официальная визитка</title>
+    <meta name="description" content="POV-покатушки, кастом и обслуживание MTB своими руками без лишнего пафоса. Все актуальные ссылки канала Не Вело Профи.">
+    <meta name="theme-color" content="#0d0e11">
+    
+    <!-- Шрифт Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- =====================================================================
+         ЯНДЕКС.МЕТРИКА (когда создашь счётчик, раскомментируй и вставь ID)
+         ===================================================================== -->
+    <!--
+    <script type="text/javascript">
+       (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+       m[i].l=1*new Date();
+       for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+       k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+       (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+       ym(XXXXXXXX, "init", {
+            clickmap:true,
+            trackLinks:true,
+            accurateTrackBounce:true
+       });
+    </script>
+    -->
+
+    <style>
+        :root {
+            --bg-base: #0d0e11;
+            --card-bg: rgba(24, 26, 31, 0.85);
+            --card-border: rgba(255, 255, 255, 0.08);
+            --text-main: #f3f4f6;
+            --text-muted: #9ca3af;
+            
+            --tt-cyan: #00f2fe;
+            --tt-pink: #fe0979;
+            --tg-blue: #2AABEE;
+            --yt-red: #FF0033;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-base);
+            background-image: 
+                radial-gradient(circle at 50% 0%, rgba(0, 242, 254, 0.07) 0%, transparent 55%),
+                linear-gradient(27deg, #121317 5px, transparent 5px),
+                linear-gradient(207deg, #121317 5px, transparent 5px),
+                linear-gradient(27deg, #181a20 5px, transparent 5px),
+                linear-gradient(207deg, #181a20 5px, transparent 5px),
+                linear-gradient(90deg, #101115 10px, transparent 10px),
+                linear-gradient(#101115 25%, #0d0e11 25%, #0d0e11 50%, transparent 50%, transparent 75%, #14161b 75%, #14161b);
+            background-size: 100% 100%, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px, 20px 20px;
+            background-position: 0 0, 0 5px, 10px 0, 0 10px, 10px 5px, 0 0, 0 0;
+            color: var(--text-main);
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 24px 16px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 440px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile {
+            text-align: center;
+            margin-bottom: 28px;
+        }
+
+        .avatar-wrapper {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            margin: 0 auto 16px;
+            border-radius: 50%;
+            padding: 3px;
+            background: linear-gradient(135deg, var(--tt-cyan), var(--tt-pink));
+            box-shadow: 0 0 24px rgba(0, 242, 254, 0.25);
+        }
+
+        .avatar {
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            object-fit: cover;
+            background-color: #181a20;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: 24px;
+            letter-spacing: 1px;
+            color: #fff;
+            border: 3px solid var(--bg-base);
+        }
+
+        .title {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            margin-bottom: 4px;
+        }
+
+        .handle {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-muted);
+            margin-bottom: 12px;
+        }
+
+        .bio {
+            font-size: 14px;
+            line-height: 1.5;
+            color: #d1d5db;
+            max-width: 340px;
+            margin: 0 auto;
+        }
+
+        .links {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+        }
+
+        .card {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            gap: 14px;
+            padding: 16px;
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid var(--card-border);
+            border-radius: 16px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: transform 0.18s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+            cursor: pointer;
+        }
+
+        .card:active {
+            transform: scale(0.98);
+        }
+
+        .icon-box {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.06);
+        }
+
+        .icon-box svg {
+            width: 24px;
+            height: 24px;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 8px;
+            margin-bottom: 4px;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 700;
+        }
+
+        .badge {
+            font-size: 10px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.6px;
+            padding: 3px 8px;
+            border-radius: 6px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            line-height: 1.4;
+            color: var(--text-muted);
+        }
+
+        /* TikTok */
+        .card-tiktok {
+            border-color: rgba(0, 242, 254, 0.45);
+            box-shadow: 0 8px 28px -6px rgba(0, 242, 254, 0.18), 0 0 0 1px rgba(254, 9, 121, 0.15);
+        }
+        .card-tiktok:hover {
+            border-color: var(--tt-cyan);
+            box-shadow: 0 10px 32px -4px rgba(0, 242, 254, 0.28);
+            transform: translateY(-2px);
+        }
+        .card-tiktok .icon-box {
+            background: linear-gradient(135deg, rgba(0, 242, 254, 0.15), rgba(254, 9, 121, 0.15));
+            border-color: rgba(0, 242, 254, 0.3);
+        }
+        .card-tiktok .badge {
+            background: linear-gradient(90deg, var(--tt-cyan), var(--tt-pink));
+            color: #090a0c;
+        }
+
+        /* Telegram */
+        .card-telegram:hover {
+            border-color: rgba(42, 171, 238, 0.5);
+            box-shadow: 0 8px 24px -6px rgba(42, 171, 238, 0.2);
+            transform: translateY(-2px);
+        }
+        .card-telegram .icon-box {
+            background: rgba(42, 171, 238, 0.12);
+            border-color: rgba(42, 171, 238, 0.25);
+            color: var(--tg-blue);
+        }
+        .card-telegram .badge {
+            background: rgba(42, 171, 238, 0.15);
+            color: var(--tg-blue);
+            border: 1px solid rgba(42, 171, 238, 0.3);
+        }
+
+        /* YouTube */
+        .card-youtube {
+            opacity: 0.88;
+        }
+        .card-youtube:hover {
+            opacity: 1;
+            border-color: rgba(255, 0, 51, 0.45);
+            box-shadow: 0 8px 24px -6px rgba(255, 0, 51, 0.18);
+            transform: translateY(-2px);
+        }
+        .card-youtube .icon-box {
+            background: rgba(255, 0, 51, 0.1);
+            border-color: rgba(255, 0, 51, 0.22);
+            color: var(--yt-red);
+        }
+        .card-youtube .badge {
+            background: rgba(255, 255, 255, 0.06);
+            color: #9ca3af;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .footer {
+            margin-top: 32px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #6b7280;
+            letter-spacing: 0.5px;
+        }
+    </style>
+</head>
+<body>
+
+    <main class="container">
+        <!-- Шапка профиля -->
+        <header class="profile">
+            <div class="avatar-wrapper">
+                <div class="avatar">NVP</div>
+            </div>
+            <h1 class="title">Не Вело Профи</h1>
+            <p class="handle">@ne_velo_profi</p>
+            <p class="bio">POV-покатушки, кастом и обслуживание MTB своими руками без лишнего пафоса</p>
+        </header>
+
+        <!-- Ссылки -->
+        <section class="links">
+            
+            <!-- 1. TIKTOK -->
+            <a href="https://www.tiktok.com/@ne_velo_profi" 
+               onclick="openApp(event, 'tiktok://user?screen_name=ne_velo_profi', 'https://www.tiktok.com/@ne_velo_profi', 'click_tiktok')" 
+               class="card card-tiktok" target="_blank" rel="noopener">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z" fill="url(#tt-grad)"/>
+                        <defs>
+                            <linearGradient id="tt-grad" x1="5" y1="2" x2="20" y2="21" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#00f2fe"/>
+                                <stop offset="1" stop-color="#fe0979"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">TikTok</span>
+                        <span class="badge">Основа</span>
+                    </div>
+                    <p class="card-desc">Главный движ, свежие POV-ролики и нарезки с покатушек</p>
+                </div>
+            </a>
+
+            <!-- 2. TELEGRAM -->
+            <a href="https://t.me/ne_velo_profi" 
+               onclick="openApp(event, 'tg://resolve?domain=ne_velo_profi', 'https://t.me/ne_velo_profi', 'click_telegram')" 
+               class="card card-telegram" target="_blank" rel="noopener">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M11.944 0A12 12 0 0 0 0 12a12 12 0 0 0 12 12 12 12 0 0 0 12-12A12 12 0 0 0 12 0a12 12 0 0 0-.056 0zm4.962 7.224c.1-.002.321.023.465.14a.506.506 0 0 1 .171.325c.016.093.036.306.02.472-.18 1.898-.962 6.502-1.36 8.627-.168.9-.499 1.201-.82 1.23-.696.065-1.225-.46-1.9-.902-1.056-.693-1.653-1.124-2.678-1.8-1.185-.78-.417-1.21.258-1.91.177-.184 3.247-2.977 3.307-3.23.007-.032.014-.15-.056-.212s-.174-.041-.249-.024c-.106.024-1.793 1.14-5.061 3.345-.48.33-.913.49-1.302.48-.428-.008-1.252-.241-1.865-.44-.752-.245-1.349-.374-1.297-.789.027-.216.325-.437.893-.663 3.498-1.524 5.83-2.529 6.998-3.014 3.332-1.386 4.025-1.627 4.476-1.635z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">Telegram</span>
+                        <span class="badge">Чат для своих</span>
+                    </div>
+                    <p class="card-desc">Ламповая тусовка, бэкстейджи со сборки и прямая связь со мной</p>
+                </div>
+            </a>
+
+            <!-- 3. YOUTUBE (Использует постоянный ID канала UCwSKylSqdgR-sBHot-46tZA) -->
+            <a href="https://www.youtube.com/channel/UCwSKylSqdgR-sBHot-46tZA" 
+               onclick="openApp(event, 'vnd.youtube://www.youtube.com/channel/UCwSKylSqdgR-sBHot-46tZA', 'https://www.youtube.com/channel/UCwSKylSqdgR-sBHot-46tZA', 'click_youtube')" 
+               class="card card-youtube" target="_blank" rel="noopener">
+                <div class="icon-box">
+                    <svg viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/>
+                    </svg>
+                </div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <span class="card-title">YouTube</span>
+                        <span class="badge">На паузе</span>
+                    </div>
+                    <p class="card-desc">Весь актив сейчас в TikTok. Но если удобнее тут — подпишись: увижу ваш интерес — начну дублировать ролики сюда</p>
+                </div>
+            </a>
+
+        </section>
+
+        <footer class="footer">
+            neveloprofi.ru
+        </footer>
+    </main>
+
+    <!-- Умный скрипт: попытка открыть приложение + метрика -->
+    <script>
+        function trackClick(goalName) {
+            if (typeof ym === 'function') {
+                ym(XXXXXXXX, 'reachGoal', goalName);
+            }
+        }
+
+        function openApp(event, appUrl, webUrl, goalName) {
+            trackClick(goalName);
+            
+            const isMobile = /Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+            if (!isMobile || !appUrl) return;
+
+            event.preventDefault();
+            const start = Date.now();
+            
+            window.location.href = appUrl;
+
+            setTimeout(() => {
+                if (Date.now() - start < 1500) {
+                    window.location.href = webUrl;
+                }
+            }, 600);
+        }
+    </script>
+</body>
+</html>
