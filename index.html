@@ -7,6 +7,9 @@
     <meta name="description" content="POV-покатушки, кастом и обслуживание MTB своими руками без лишнего пафоса. Все актуальные ссылки канала Не Вело Профи.">
     <meta name="theme-color" content="#0d0e11">
     
+    <!-- Иконка вкладки (Favicon) -->
+    <link rel="icon" type="image/jpeg" href="logo.jpg">
+
     <!-- Шрифт Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -96,6 +99,7 @@
             padding: 3px;
             background: linear-gradient(135deg, var(--tt-cyan), var(--tt-pink));
             box-shadow: 0 0 24px rgba(0, 242, 254, 0.25);
+            overflow: hidden; /* Обрезает всё, что выходит за рамки круга */
         }
 
         .avatar {
@@ -104,14 +108,9 @@
             border-radius: 50%;
             object-fit: cover;
             background-color: #181a20;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: 800;
-            font-size: 24px;
-            letter-spacing: 1px;
-            color: #fff;
+            display: block;
             border: 3px solid var(--bg-base);
+            transform: scale(1.15); /* Увеличивает логотип на 15% для плотной посадки в круг */
         }
 
         .title {
@@ -287,7 +286,7 @@
         <!-- Шапка профиля -->
         <header class="profile">
             <div class="avatar-wrapper">
-                <div class="avatar">NVP</div>
+                <img src="logo.jpg" alt="Не Вело Профи" class="avatar">
             </div>
             <h1 class="title">Не Вело Профи</h1>
             <p class="handle">@ne_velo_profi</p>
